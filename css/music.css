@@ -1,0 +1,131 @@
+/* defines variables */
+:root {
+  --primary-color: #ccd8ec; 
+  --secondary-color: #f1f5fd;
+  --tertiary-color: #adb2d8;
+  --primary-border-color: #6768a1;
+  --secondary-border-color: #ccd8ec;
+  --outer-border-width: 5px;
+  --inner-border-width: 3px;
+  --header-font-size: 20px;
+  --text-font-size: 20px;
+  --primary-font: "Pixelify Sans", 'Courier New', Courier, monospace;
+
+}
+
+/* Makes borders and padding inclusive in sizing */
+* {
+    font-family: var(--primary-font);
+    box-sizing: border-box;
+}
+
+/* removes the styling on headers */
+.clear-h-style {
+  margin: 0;
+  font-weight: 100;
+}
+
+/* main section styling */
+#main-section {
+    border: var(--inner-border-width) var(--primary-border-color) solid;
+    display: flex;
+    flex-direction: column;
+    margin: 5em 10em;
+}
+
+/* title bar styling */
+.desktop-title-bar {
+  border-top: var(--inner-border-width) var(--secondary-border-color) solid;
+  border-left: var(--inner-border-width) var(--secondary-border-color) solid;
+  border-right: var(--inner-border-width) var(--primary-border-color) solid;
+  border-bottom: var(--inner-border-width) var(--primary-border-color) solid;
+  background: linear-gradient(in hsl, var(--secondary-color), var(--primary-color));
+  display: flex;
+  justify-content: space-between;
+  align-items:start;
+  padding: 0.5em;
+}
+
+.desktop-title-bar h2 {
+  font-size: var(--header-font-size);
+  font-weight: 500;
+  font-family: var(--primary-font);
+  text-shadow: 1px 2px var(--primary-border-color);
+}
+
+.desktop-corner-icons {
+  display: flex;
+  gap: 0.5rem;
+  
+}
+
+.desktop-corner-icons div {
+  width: 1.5em;
+  height: 1.5em;
+  font-size: small;
+  font-family: var(--primary-font);
+  display: flex;
+  justify-content: center;
+  border-top: var(--inner-border-width) var(--secondary-border-color) solid;
+  border-left: var(--inner-border-width) var(--secondary-border-color) solid;
+  border-right: var(--inner-border-width) var(--primary-border-color) solid;
+  border-bottom: var(--inner-border-width) var(--primary-border-color) solid;
+}
+
+/* shortcut styling */
+.shortcut-bar ul {
+   display: flex;
+   list-style-type: none;
+   padding: 0 0 0 1em;
+   margin: .5em 0;
+   gap: 1em;
+}
+
+.shortcut-bar {
+    background: linear-gradient(in oklab, var(--secondary-border-color), var(--tertiary-color));
+}
+
+/* inner-section styling */
+.inner-section {
+    display: flex;
+    border: var(--outer-border-width) var(--tertiary-color) solid;
+}
+
+/* sidebar styling */
+.sidebar {
+    border-bottom: var(--inner-border-width) var(--secondary-border-color) solid;
+    border-right: var(--inner-border-width) var(--secondary-border-color) solid;
+    border-left: var(--inner-border-width) var(--primary-border-color) solid;
+    border-top: var(--inner-border-width) var(--primary-border-color) solid;
+    flex: 1;
+    background-color: var(--tertiary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+/* file display styling */
+.file-display {
+    border-bottom: var(--inner-border-width) var(--secondary-border-color) solid;
+    border-right: var(--inner-border-width) var(--secondary-border-color) solid;
+    border-left: var(--inner-border-width) var(--primary-border-color) solid;
+    border-top: var(--inner-border-width) var(--primary-border-color) solid;
+    flex: 3;
+    height: 30em;
+
+}
+
+/* file tabs styling */
+.file-tabs {
+    border-bottom: var(--inner-border-width) var(--secondary-border-color) solid;
+    border-right: var(--inner-border-width) var(--secondary-border-color) solid;
+    border-left: var(--inner-border-width) var(--primary-border-color) solid;
+    border-top: var(--inner-border-width) var(--primary-border-color) solid;   
+    font-size: var(--text-font-size);
+    padding-left: 1em;
+    margin-bottom: 1em;
+    background-image: url("../imgs/blue_star_background.jpeg");
+    background-size: 5em;
+}
+
